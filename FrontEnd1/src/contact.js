@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 
 function Contact() {
@@ -93,7 +94,8 @@ function Contact() {
     </div>
       <div>
         <br></br>
-        <input  type='submit' />
+        {/* <input  type='submit' className=''/> */}
+        <Button variant="primary" type='submit'>Submit</Button>
         </div>
        <p style={{ paddingTop: '20px' }}></p>
       </Form>
