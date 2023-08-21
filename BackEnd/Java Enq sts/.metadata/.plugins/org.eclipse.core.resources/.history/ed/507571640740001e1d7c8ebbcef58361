@@ -1,0 +1,14 @@
+package com.example.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Followup {
+
+	private int followup_id;
+	private int enquiry_id;
+	private int staff_id;
+
+}

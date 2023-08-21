@@ -1,0 +1,12 @@
+package com.example.demo;
+
+public class IEnquiryImpl implements IEnquriy {
+
+	@Override
+	public void save(Enquiry enq) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

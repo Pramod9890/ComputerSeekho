@@ -1,0 +1,33 @@
+package com.example.entities;
+
+import java.util.Date;
+
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
+@Entity
+@Table
+public class Enquiry {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int enquiry_id;
+	String enquirer_name;
+	String enquirer_address;
+	Long enquirer_mobile;
+	String enquirer_email_id;
+	Date enquiry_date;
+	String enquirer_query;
+	int closure_reasonId;
+	String closure_reason;
+	boolean enquiry_processed_flag;
+	String student_name;
+	int inquiry_counter;
+	Date follow_up_date;
+
+	
+
+
+	
+}

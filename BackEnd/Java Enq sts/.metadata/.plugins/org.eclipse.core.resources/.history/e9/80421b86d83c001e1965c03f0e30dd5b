@@ -1,0 +1,57 @@
+package com.example.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.example.entity.Enquiry;
+import com.example.repository.EnquriyRepository;
+
+@Service
+public class EnquiryImpl implements EnquiryService {
+
+	@Autowired
+	private EnquriyRepository e;
+	
+	
+	public void aftersubmit(@RequestBody Enquiry enquiry) {
+		e.save(enquiry);
+	}
+	
+	public void Delete(@PathVariable int id)
+	{
+		e.deleteById(id);
+	}
+	
+	public List<Enquiry> GetAll()
+	{
+		return e.findAll();
+	}
+	
+	public Optional<Enquiry> GetById(@PathVariable int id)
+	{
+		return e.findById(id);
+	}
+	
+	@GetMapping(value = "api/productByName/{name}")
+	 public Optional<Product> getProByName(@PathVariable String name)
+	 {
+		
+		return p;
+	 }
+
+	@Override
+	public Optional<Enquiry> findByName(String name) {
+		
+		Optional<Enquiry> n=e.
+		return n;
+	}
+	
+}

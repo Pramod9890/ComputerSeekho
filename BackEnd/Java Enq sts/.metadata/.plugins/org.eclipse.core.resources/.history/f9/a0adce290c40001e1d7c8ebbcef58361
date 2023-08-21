@@ -1,0 +1,8 @@
+package com.example.repositories;
+
+import jakarta.transaction.Transactional;
+
+@Transactional
+public interface FollowUpRepository extends JpaRepository<Followup,Integer>{
+
+}

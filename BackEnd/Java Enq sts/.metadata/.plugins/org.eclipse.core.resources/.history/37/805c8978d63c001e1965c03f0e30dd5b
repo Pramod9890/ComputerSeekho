@@ -1,0 +1,18 @@
+package com.example.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.example.entity.Enquiry;
+
+public interface EnquiryService {
+
+	public void aftersubmit(@RequestBody Enquiry enquiry);
+	public void afterdelete(@PathVariable int id);
+	public List<Enquiry> getall();
+	public Optional<Enquiry> getbyid(@PathVariable int id);
+	
+}

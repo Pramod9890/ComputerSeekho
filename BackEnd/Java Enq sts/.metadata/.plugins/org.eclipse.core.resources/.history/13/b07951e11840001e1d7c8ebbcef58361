@@ -1,0 +1,15 @@
+package com.example.services;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.entities.Enquiry;
+
+public interface FollowUpService {
+
+	public void Add();
+	public List<Enquiry> GetAllFollowUp();
+	public List<Enquiry> GetFollowUpByStaffId();
+	
+}

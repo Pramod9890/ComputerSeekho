@@ -1,0 +1,41 @@
+package com.example.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.entity.Enquiry;
+import com.example.repository.EnquriyRepository;
+
+@Service
+public class EnquiryImpl implements EnquiryService {
+
+	@Autowired
+	private EnquriyRepository e;
+
+	public void Formsubmit(Enquiry enquiry) {
+		e.save(enquiry);
+	}
+
+	public void DeleteById(int id) {
+		e.deleteById(id);
+	}
+
+	public List<Enquiry> GetAll() {
+		return e.findAll();
+	}
+
+	public Optional<Enquiry> FindById(int id) {
+		return e.findById(id);
+	}
+
+	@Override
+	public Optional<Enquiry> GetByName(String name) {
+
+		Optional<Enquiry> p = e.findByName(name);
+		return p;
+	}
+
+}
