@@ -53,7 +53,7 @@ public class EnquiryController {
 		return p;
 	}
 	
-	@PutMapping(value="api/update/{id}")
+	@PutMapping(value="api/eupdate/{id}")
 	public void update(@RequestBody Enquiry e,@PathVariable int id)
 	{
 		enq.update(e, id);
