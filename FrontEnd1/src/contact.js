@@ -102,12 +102,6 @@ function Contact() {
        </Col>
        
        <Col sm={6}>
-       <br></br>
-        <h4 style={{ position: 'relative', top: '50px', left: '220px' }} >Authorised Training Centre</h4>
-          <strong style={{ position: 'relative', top: '50px', left: '220px' }}>5th Floor, Vidyanidhi Education Complex,<br></br> Vidyanidhi Road, Juhu Scheme Andheri (W), Mumbai 400 049 India<br></br>
-          Mobile : 9029435311 / 9324095272 / 9987062416<br></br>
-       Email : training@vidyanidhi.com
-       </strong>
        </Col>
     </Row>
     </Container>

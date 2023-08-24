@@ -17,7 +17,7 @@ import com.example.entities.Enquiry;
 import com.example.services.*;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 public class EnquiryController {
 	
 	@Autowired
@@ -34,7 +34,7 @@ public class EnquiryController {
 //		enq.DeleteById(id);
 //	}
 	
-	@GetMapping(value="getall")
+	@GetMapping(value="api/egetall")
 	public List<Enquiry> GetAllList()
 	{
 		return enq.GetAll();

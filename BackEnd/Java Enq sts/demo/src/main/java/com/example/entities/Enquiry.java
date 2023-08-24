@@ -24,7 +24,7 @@ public class Enquiry {
 	boolean enquiry_processed_flag;
 	String student_name;
 	int inquiry_counter;
-	Date follow_up_date;
+	String follow_up_date;
 	/**
 	 * @return the enquiry_id
 	 */
@@ -172,13 +172,13 @@ public class Enquiry {
 	/**
 	 * @return the follow_up_date
 	 */
-	public Date getFollow_up_date() {
+	public String getFollow_up_date() {
 		return follow_up_date;
 	}
 	/**
 	 * @param follow_up_date the follow_up_date to set
 	 */
-	public void setFollow_up_date(Date follow_up_date) {
+	public void setFollow_up_date(String follow_up_date) {
 		this.follow_up_date = follow_up_date;
 	}
 

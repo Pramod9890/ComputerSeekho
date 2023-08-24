@@ -17,6 +17,7 @@ public class EnquiryImpl implements EnquiryService {
 
 	public void Formsubmit(Enquiry enquiry) {
 		e.save(enquiry);
+	//	e.submit(String enquirer_name,String enquirer_email_id,String enquirer_mobile,String enquirer_address,String enquirer_query,Date date,boolean b,int enquiry_id);
 	}
 
 //	public void DeleteById(int id) {
@@ -40,7 +41,7 @@ public class EnquiryImpl implements EnquiryService {
 	
 	public void update(Enquiry enq ,int id)
 	{
-		e.update(enq.getEnquirer_name(),enq.getEnquirer_address(), enq.getEnquirer_mobile(), enq.getEnquiry_date(),enq.getEnquirer_email_id(), enq.getEnquirer_query(), enq.getClosure_reason(),enq.getClosure_reasonId(),enq.isEnquiry_processed_flag(), enq.getStudent_name(), enq.getInquiry_counter(),id);
+		e.update(enq.getEnquirer_name(),enq.getEnquirer_address(), enq.getEnquirer_mobile(),enq.getEnquirer_email_id(), enq.getEnquirer_query(), enq.getClosure_reason(),enq.getClosure_reasonId(),enq.isEnquiry_processed_flag(), enq.getStudent_name(), enq.getInquiry_counter(),id);
 	
 	}
 
