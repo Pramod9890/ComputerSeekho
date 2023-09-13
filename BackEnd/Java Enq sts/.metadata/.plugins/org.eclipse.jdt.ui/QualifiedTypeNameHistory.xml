@@ -55,4 +55,7 @@
     <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.example.entityPayment.Payment"/>
+    <fullyQualifiedTypeName name="com.example.entities.ClosureReasonMaster"/>
+    <fullyQualifiedTypeName name="com.example.services.ClosureReasonMasterManager"/>
 </qualifiedTypeNameHistroy>

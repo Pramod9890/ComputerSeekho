@@ -1,17 +1,19 @@
 package com.example.entities;
 
-import java.util.*;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
-//@Table(name = "Course")
+@Table(name = "Course")
 public class Course {
 
 	@Id
@@ -28,24 +30,16 @@ public class Course {
 	
 	private String age_grp_type;
 	
-	private boolean course_is_active;
+	private boolean course_is_active=true;
 	
 	private String cover_photo;
 	
-	private int video_id;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "course_id" ,referencedColumnName = "course_id")
-	private Set<Enquiry> cid;
-	
-	
-	public Course() {
-	}
-	
-	public Course(String course_name, Set<Enquiry> cid) {
-		this.course_name = course_name;
-		this.cid = cid;
-	}
+	private String video_link;
+
+//	private Set<Batch> batches;
+//	@OneToMany(cascade = CascadeType.ALL)
+//	@JoinColumn(name = "course_id", referencedColumnName="course_id")
+//	private Set<Student> Student;
 
 	/**
 	 * @return the course_id
@@ -162,41 +156,30 @@ public class Course {
 	/**
 	 * @return the video_id
 	 */
-	public int getVideo_id() {
-		return video_id;
+	public String getvideo_link() {
+		return video_link;
 	}
 
 	/**
 	 * @param video_id the video_id to set
 	 */
-	public void setVideo_id(int video_id) {
-		this.video_id = video_id;
+	public void setvideo_link(String video_id) {
+		this.video_link = video_id;
 	}
 
-	
-	
-	/**
-	 * @return the cid
-	 */
-	
-	
-	public Set<Enquiry> getCid() {
-		return cid;
-	}
-
-	/**
-	 * @param cid the cid to set
-	 */
-	public void setCid(Set<Enquiry> cid) {
-		this.cid = cid;
-	}
-
+//	public Set<Batch> getBatches() {
+//		return batches;
+//	}
+//
+//	public void setBatches(Set<Batch> batches) {
+//		this.batches = batches;
+//	}
 	@Override
 	public String toString() {
 		return "Course [course_id=" + course_id + ", course_name=" + course_name + ", course_description="
 				+ course_description + ", course_duration=" + course_duration + ", course_syllabus=" + course_syllabus
 				+ ", age_grp_type=" + age_grp_type + ", course_is_active=" + course_is_active + ", cover_photo="
-				+ cover_photo + ", video_id=" + video_id + "]";
+				+ cover_photo + ", video_link=" + video_link + "]";
 	}
 	
 	

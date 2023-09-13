@@ -15,9 +15,11 @@ public class EnquiryImpl implements EnquiryService {
 	@Autowired
 	private EnquriyRepository e;
 
-	public void Formsubmit(Enquiry enquiry) {
-		e.save(enquiry);
+	public void Formsubmit(Enquiry enq) {
+		e.save(enq);
 	//	e.submit(String enquirer_name,String enquirer_email_id,String enquirer_mobile,String enquirer_address,String enquirer_query,Date date,boolean b,int enquiry_id);
+//		e.updatef(enq.getEnquirer_name(),enq.getEnquirer_address(), enq.getEnquirer_mobile(),enq.getEnquirer_email_id(), enq.getEnquirer_query(), enq.getClosure_reason(),enq.getClosure_reasonId(),enq.isEnquiry_processed_flag(), enq.getStudent_name(), enq.getInquiry_counter());
+		
 	}
 
 //	public void DeleteById(int id) {
@@ -41,7 +43,7 @@ public class EnquiryImpl implements EnquiryService {
 	
 	public void update(Enquiry enq ,int id)
 	{
-		e.update(enq.getEnquirer_name(),enq.getEnquirer_address(), enq.getEnquirer_mobile(),enq.getEnquirer_email_id(), enq.getEnquirer_query(), enq.getClosure_reason(),enq.getClosure_reasonId(),enq.isEnquiry_processed_flag(), enq.getStudent_name(), enq.getInquiry_counter(),id);
+		e.update(enq.getEnquirer_name(),enq.getEnquirer_address(), enq.getEnquirer_mobile(),enq.getEnquirer_email_id(), enq.getEnquirer_query(), enq.getClosure_reason(),enq.getClosure_reasonId(),enq.isEnquiry_processed_flag(), enq.getStudent_name(), enq.getInquiry_counter());
 	
 	}
 

@@ -1,11 +1,14 @@
 package com.example.entities;
-import java.math.BigInteger;
-import java.util.Set;
+
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
 
 @Entity
-//@Table(name="Staff")
+@Table(name="Staff")
 public class Staff {
 	
 	@Id
@@ -13,16 +16,20 @@ public class Staff {
 	private int staff_id;
 	
 	private String staff_name;
-	private String photo_url;
-	private BigInteger staff_mobile;
+	private String photo_url="https://ajcacollege.in/wp-content/uploads/icon.jpg";
+	private String staff_mobile;
 	private String staff_email;
 	private String staff_username;
 	private String staff_password;
 	private String staff_role;
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "staff_id" ,referencedColumnName = "staff_id")
-	private Set<Enquiry> sid;
+	private boolean staff_isactive=true;	
 	
+	public boolean isStaff_isactive() {
+		return staff_isactive;
+	}
+	public void setStaff_isactive(boolean staff_isactive) {
+		this.staff_isactive = staff_isactive;
+	}
 	public int getStaff_id() {
 		return staff_id;
 	}
@@ -41,10 +48,10 @@ public class Staff {
 	public void setPhoto_url(String photo_url) {
 		this.photo_url = photo_url;
 	}
-	public BigInteger getStaff_mobile() {
+	public String getStaff_mobile() {
 		return staff_mobile;
 	}
-	public void setStaff_mobile(BigInteger staff_mobile) {
+	public void setStaff_mobile(String staff_mobile) {
 		this.staff_mobile = staff_mobile;
 	}
 	public String getStaff_email() {
@@ -73,25 +80,12 @@ public class Staff {
 	}
 	
 	
-	
-	/**
-	 * @return the sid
-	 */
-
-	public Set<Enquiry> getSid() {
-		return sid;
-	}
-	/**
-	 * @param sid the sid to set
-	 */
-	public void setSid(Set<Enquiry> sid) {
-		this.sid = sid;
-	}
 	@Override
 	public String toString() {
 		return "Staff [staff_id=" + staff_id + ", staff_name=" + staff_name + ", photo_url=" + photo_url
 				+ ", staff_mobile=" + staff_mobile + ", staff_email=" + staff_email + ", staff_username="
-				+ staff_username + ", staff_password=" + staff_password + ", staff_role=" + staff_role + "]";
+				+ staff_username + ", staff_password=" + staff_password + ", staff_role=" + staff_role
+				+ ", staff_isactive=" + staff_isactive + "]";
 	}
 	
 	

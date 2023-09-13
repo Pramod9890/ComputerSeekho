@@ -2,9 +2,6 @@ package com.example.entities;
 
 import java.util.Date;
 
-
-
-import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,17 +11,28 @@ public class Enquiry {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int enquiry_id;
 	String enquirer_name;
-	String enquirer_address;
-	Long enquirer_mobile;
+	
+	String enquirer_mobile;
 	String enquirer_email_id;
 	Date enquiry_date;
-	String enquirer_query;
-	int closure_reasonId;
+	Date follow_up_date;
 	String closure_reason;
-	boolean enquiry_processed_flag;
-	String student_name;
-	int inquiry_counter;
-	String follow_up_date;
+	String followup_msg;
+	String enquirer_query;
+	boolean enquiry_processed_flag=false;
+	int staff_id;
+	
+//	@ManyToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(name= "staff_id")
+//	private Staff staff_id;
+	
+	
+	public int getStaff_id() {
+		return staff_id;
+	}
+	public void setStaff_id(int staff_id) {
+		this.staff_id = staff_id;
+	}
 	/**
 	 * @return the enquiry_id
 	 */
@@ -52,25 +60,25 @@ public class Enquiry {
 	/**
 	 * @return the enquirer_address
 	 */
-	public String getEnquirer_address() {
-		return enquirer_address;
-	}
-	/**
-	 * @param enquirer_address the enquirer_address to set
-	 */
-	public void setEnquirer_address(String enquirer_address) {
-		this.enquirer_address = enquirer_address;
-	}
+//	public String getEnquirer_address() {
+//		return enquirer_address;
+//	}
+//	/**
+//	 * @param enquirer_address the enquirer_address to set
+//	 */
+//	public void setEnquirer_address(String enquirer_address) {
+//		this.enquirer_address = enquirer_address;
+//	}
 	/**
 	 * @return the enquirer_mobile
 	 */
-	public Long getEnquirer_mobile() {
+	public String getEnquirer_mobile() {
 		return enquirer_mobile;
 	}
 	/**
 	 * @param enquirer_mobile the enquirer_mobile to set
 	 */
-	public void setEnquirer_mobile(Long enquirer_mobile) {
+	public void setEnquirer_mobile(String enquirer_mobile) {
 		this.enquirer_mobile = enquirer_mobile;
 	}
 	/**
@@ -112,15 +120,7 @@ public class Enquiry {
 	/**
 	 * @return the closure_reasonId
 	 */
-	public int getClosure_reasonId() {
-		return closure_reasonId;
-	}
-	/**
-	 * @param closure_reasonId the closure_reasonId to set
-	 */
-	public void setClosure_reasonId(int closure_reasonId) {
-		this.closure_reasonId = closure_reasonId;
-	}
+	
 	/**
 	 * @return the closure_reason
 	 */
@@ -148,38 +148,23 @@ public class Enquiry {
 	/**
 	 * @return the student_name
 	 */
-	public String getStudent_name() {
-		return student_name;
-	}
-	/**
-	 * @param student_name the student_name to set
-	 */
-	public void setStudent_name(String student_name) {
-		this.student_name = student_name;
-	}
-	/**
-	 * @return the inquiry_counter
-	 */
-	public int getInquiry_counter() {
-		return inquiry_counter;
-	}
-	/**
-	 * @param inquiry_counter the inquiry_counter to set
-	 */
-	public void setInquiry_counter(int inquiry_counter) {
-		this.inquiry_counter = inquiry_counter;
-	}
+		
 	/**
 	 * @return the follow_up_date
 	 */
-	public String getFollow_up_date() {
+	public Date getFollow_up_date() {
 		return follow_up_date;
 	}
 	/**
 	 * @param follow_up_date the follow_up_date to set
 	 */
-	public void setFollow_up_date(String follow_up_date) {
+	public void setFollow_up_date(Date follow_up_date) {
 		this.follow_up_date = follow_up_date;
 	}
-
+	public String getFollowup_msg() {
+		return followup_msg;
+	}
+	public void setFollowup_msg(String followup_msg) {
+		this.followup_msg = followup_msg;
+	}
 }

@@ -30,5 +30,4 @@ public class ClosureReasonMasterController {
 	{
 		reason.addReason(c1);
 	}
-
 }
