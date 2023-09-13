@@ -1,7 +1,0 @@
-package com.example.repositories;
-
-
-@RestController
-public class FollowUpRepository {
-
-}

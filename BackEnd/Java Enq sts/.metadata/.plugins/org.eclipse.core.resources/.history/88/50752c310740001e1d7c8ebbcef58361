@@ -1,7 +1,0 @@
-package com.example.entities;
-
-@Entity
-@Table
-public class Followup {
-
-}
