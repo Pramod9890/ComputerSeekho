@@ -1,2 +1,0 @@
-# ComputerSeekho
-PG Diploma Project
